@@ -1,0 +1,76 @@
+ /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe4e1; /* Light Pink */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Container */
+.container {
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 15px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Accepted Button */
+.accepted {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+/* Rejected Button */
+.rejected {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+/* Button Hover Effect */
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Animation for the "Reject" button to run away */
+@keyframes runAway {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+.rejected.run-away {
+    animation: runAway 0.5s ease-out forwards;
+}
